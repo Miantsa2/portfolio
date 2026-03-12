@@ -1,0 +1,181 @@
+<header class="fixed top-0 left-0 w-full z-50 px-6 py-4 flex justify-between items-center bg-[#FFFBFC]  dark:bg-[#020617] dark:border-white">      
+  <div class="flex items-center gap-3">
+        <img 
+        src="logo.png" 
+        alt="Logo RM" 
+        class="h-11 w-auto object-contain transition-transform duration-300 group-hover:rotate-6"
+        >
+       <div class="flex flex-col justify-center">
+            <span class="text-[rgb(209,131,169)] font-serif text-2xl  tracking-tight leading-none">
+                Miantsa
+            </span>
+            
+            <span class="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-500 font-light mt-1">
+                My Portfolio
+            </span>
+        </div>
+ 
+    
+    </div>
+
+
+  <nav class="hidden lg:flex items-center gap-6 lg:gap-8 text-[rgb(58,52,91)] dark:text-white">
+    <a
+      routerLink="/main-layout/home"
+      routerLinkActive="text-[rgb(209,131,169)]"
+      [routerLinkActiveOptions]="{ exact: true }"
+      class="relative text-xs uppercase tracking-[0.2em] hover:text-[rgb(209,131,169)] transition-colors group"
+      >
+      Home
+      <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[rgb(209,131,169)] transition-all duration-300 group-hover:w-full"></span>
+    </a>
+
+    <a routerLink="/main-layout/profile"
+        routerLinkActive="text-[rgb(209,131,169)]"
+        [routerLinkActiveOptions]="{ exact: true }"
+         class="relative text-xs uppercase tracking-[0.2em] hover:text-[rgb(209,131,169)] transition-colors group">
+      Profile
+      <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[rgb(209,131,169)] transition-all duration-300 group-hover:w-full"></span>
+    </a>
+
+    <a routerLink="/main-layout/projects"
+        routerLinkActive="text-[rgb(209,131,169)]"
+        [routerLinkActiveOptions]="{ exact: true }"
+         class="relative text-xs uppercase tracking-[0.2em] hover:text-[rgb(209,131,169)] transition-colors group">
+      Projects
+      <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[rgb(209,131,169)] transition-all duration-300 group-hover:w-full"></span>
+    </a>
+
+    <a routerLink="/main-layout/contact"
+        routerLinkActive="text-[rgb(209,131,169)]"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="relative text-xs uppercase tracking-[0.2em] hover:text-[rgb(209,131,169)] transition-colors group">
+        Contact
+      <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[rgb(209,131,169)] transition-all duration-300 group-hover:w-full"></span>
+    </a>
+  </nav>
+
+  <div class="flex items-center gap-8">
+
+    <a href="#contact" 
+    class="hidden sm:block px-6 py-2 text-xs uppercase tracking-widest font-bold 
+            bg-[rgb(209,131,169)] text-white rounded shadow-lg shadow-[rgb(209,131,169)]/20 
+            hover:bg-[rgb(190,110,150)] hover:shadow-[rgb(209,131,169)]/40 
+            duration-300">
+          Hire Me
+    </a>
+
+    <button (click)="toggleSettings()" class="w-10 h-10 rounded-full bg-portfolio-card border border-white/10 flex items-center justify-center text-[rgb(209,131,169)] hover:bg-[rgb(243,200,221)] hover:text-portfolio-dark transition-all shadow-lg group">
+      <svg *ngIf="!isSettingsOpen" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform duration-500 group-hover:rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 0 1 0 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 0 1 0-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281Z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+      </svg>
+
+      <svg *ngIf="isSettingsOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transition-all scale-110" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+
+    <button (click)="isMenuOpen = !isMenuOpen" class="flex items-center lg:hidden text-[rgb(209,131,169)]">
+      <span class="text-3xl material-symbols-outlined">{{ isMenuOpen ? 'close' : 'menu' }} </span>
+    </button>
+
+    
+  <div *ngIf="isMenuOpen" class="absolute top-full left-0 w-full bg-white  z-[100] lg:hidden shadow-lg dark:bg-gray-900 dark:text-white">
+    <div class="flex flex-col gap-3 p-5">
+
+      <!-- Home -->
+      <a routerLink="/main-layout/home"
+        routerLinkActive="text-[rgb(209,131,169)]"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="flex items-center gap-2 py-2 px-3 rounded hover:bg-[rgb(245,222,250)] transition-colors">
+        <span class="material-symbols-outlined text-[20px] text-[rgb(209,131,169)]">home</span>
+        <span>Home</span>
+      </a>
+
+      <!-- Profile -->
+      <a routerLink="/main-layout/profile"
+        routerLinkActive="text-[rgb(209,131,169)]"
+        [routerLinkActiveOptions]="{ exact: true }"
+         class="flex items-center gap-2 py-2 px-3 rounded hover:bg-[rgb(245,222,250)] transition-colors">
+        <span class="material-symbols-outlined text-[20px] text-[rgb(209,131,169)]">person</span>
+        <span>Profile</span>
+      </a>
+
+      <!-- Projects -->
+      <a routerLink="/main-layout/projects"
+        routerLinkActive="text-[rgb(209,131,169)]"
+        [routerLinkActiveOptions]="{ exact: true }"
+         class="flex items-center gap-2 py-2 px-3 rounded hover:bg-[rgb(245,222,250)] transition-colors">
+        <span class="material-symbols-outlined text-[20px] text-[rgb(209,131,169)]">code</span>
+        <span>Projects</span>
+      </a>
+
+      <!-- Contact -->
+      <a routerLink="/main-layout/contact"
+        routerLinkActive="text-[rgb(209,131,169)]"
+        [routerLinkActiveOptions]="{ exact: true }"
+         class="flex items-center gap-2 py-2 px-3 rounded hover:bg-[rgb(245,222,250)] transition-colors">
+        <span class="material-symbols-outlined text-[20px] text-[rgb(209,131,169)]">mail</span>
+        <span>Contact</span>
+      </a>
+
+      <!-- Hire Me -->
+      <a href="#contact" class="mt-6 flex items-center justify-center py-3 px-4 bg-[rgb(209,131,169)] text-white font-bold rounded-lg shadow-lg hover:bg-[rgb(190,110,150)] transition-all">
+        Hire Me
+      </a>
+
+    </div>
+  </div>
+  </div>
+  
+
+</header>
+
+<div
+  *ngIf="isSettingsOpen"
+  class="fixed top-20 right-6 z-[200] border border-white/10 shadow-2xl rounded-2xl p-5 w-72 text-[rgb(58,52,91)] bg-white dark:bg-[#020617] dark:border-white/10 dark:text-white"
+>
+  <h3 class="font-serif text-[rgb(209,131,169)] text-lg font-bold mb-5 flex items-center gap-2">
+    <span class="material-symbols-outlined text-[20px] text-[rgb(209,131,169)]">tune</span>
+    Preferences
+  </h3>
+
+  <div class="mb-6 flex items-center justify-between">
+
+  <span class="text-sm font-medium tracking-wide">
+    Interface Mode
+  </span>
+
+  <button
+    (click)="toggleTheme()"
+    class="w-10 h-10 flex items-center justify-center rounded-full 
+           bg-[rgb(209,131,169)] dark:bg-gray-700 
+           hover:scale-110 transition"
+  >
+
+    <!-- lune -->
+    @if(!isDarkMode){
+      <span class="material-symbols-outlined text-[20px] text-white">dark_mode</span>  
+    }
+    @if(isDarkMode){
+      <span class="material-symbols-outlined text-[20px] text-[rgb(209,131,169)]">light_mode</span>  
+    }
+  
+  </button>
+
+</div>
+  <hr class="border mb-6 dark:border-[rgb(209,131,169)] ">
+
+  <div>
+    <p class="text-sm  font-medium mb-3 tracking-wide">Language</p>
+    <div class="grid grid-cols-2 gap-2">
+      <button class="text-xs py-2 px-3 rounded-lg border border-[rgb(209,131,169)] bg-[rgb(209,131,169)]/10 text-[rgb(209,131,169)] font-bold transition-all hover:bg-[rgb(209,131,169)] hover:text-white">
+        ENGLISH
+      </button>
+      <button class="text-xs py-2 px-3 rounded-lg border border-white/10 text-gray-400 font-bold transition-all hover:bg-[rgb(209,131,169)] hover:hover:text-white">
+        FRENCH
+      </button>
+    </div>
+  </div>
+</div>
