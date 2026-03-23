@@ -1,75 +1,158 @@
 <section class="max-w-7xl mx-auto px-6 py-20">
-    <div class="flex items-center gap-9">
-        <div class="flex-shrink-0">
+
+  <!-- PROFILE -->
+    <div class="flex items-center gap-9 mb-12">
+            <div class="flex-shrink-0">
             <img
                 src="photo.png"
                 alt="profile"
                 class="w-32 h-40 md:w-36 md:h-40 object-cover rounded-2xl shadow-[0_10px_30px_rgba(113,85,122,0.6)] hover:scale-105 transition-transform duration-300">
-        </div>
+            </div>
 
-        <div class="max-w-2xl">
-            <h1 class="text-5xl font-bold mb-4 text-[rgb(209,131,169)]">
-                Profile
-            </h1>
-
-            <p class="text-gray-600 leading-relaxed dark:text-gray-100">
-                Passionate about creating digital solutions and driven by innovation,
-                I am a Full Stack developer specialized in building scalable and
-                user-centered web applications.
-            </p>
-        </div>
-
+            <div class="max-w-2xl">
+                <h1 class="text-5xl font-bold mb-4 text-[rgb(209,131,169)]">Profile</h1>
+                <p class="text-gray-600 leading-relaxed dark:text-gray-100">
+                    Passionate about creating digital solutions and driven by innovation,
+                    I am a Full Stack developer specialized in building scalable and
+                    user-centered web applications.
+                </p>
+            </div>
     </div>
 
-    <h2 class="text-3xl font-bold  mt-6 text-[rgb(209,131,169)]">
-        <span class="material-symbols-outlined text-[28px] text-[rgb(209,131,169)]"> school</span>
-            Educations
-    </h2>
+  <!-- MAIN GRID -->
+    <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div class="space-y-6">
+           <div class="mb-6">
 
-    <div class="mt-6 grid md:grid-cols-2 gap-12 items-start">
-      
-        <div class="relative ml-6 border-l-2 border-[rgb(209,131,169)] dark:border-pink-400">
-            <div class="mb-5 ml-6 relative">
-                <span class="absolute -left-8 top-1 w-4 h-4 rounded-full bg-[rgb(209,131,169)] animate-bounce dark:bg-pink-400 ring-2 ring-white dark:ring-slate-900"></span>
-                <h3 class="text-xl font-semibold text-[rgb(113,85,122)] dark:text-white">
-                    Master’s Degree in Computer Science
-                </h3>
-                <p class="text-sm text-gray-500 dark:text-gray-300">Université de Madagascar — 2020-2022</p>
+                <h2 *ngIf="activeTab === 'education'" class="text-[25px] font-bold text-[rgb(209,131,169)] flex items-center gap-3 mb-3">
+                    <span class="material-symbols-outlined text-[28px]">school</span>
+                    Education
+                </h2>
+
+                <h2 *ngIf="activeTab === 'experience'" class="text-[25px] font-bold text-[rgb(209,131,169)] flex items-center gap-3 mb-3">
+                    <span class="material-symbols-outlined text-[28px]">work</span>
+                    Work Experience
+                </h2>
+
+
+                <div class="inline-flex gap-3 p-2 mx-8 rounded-xl shadow-md bg-[rgb(243,200,221)]/10 dark:bg-slate-800">
+                    <button 
+                        (click)="setTab('education')"
+                        [ngClass]="{
+                            'bg-[rgb(209,131,169)] text-white': activeTab === 'education',
+                            'text-[rgb(209,131,169)]': activeTab !== 'education'
+                        }"
+                        class="px-4 py-2 rounded-lg text-sm transition">
+                        Education
+                    </button>
+
+                    <button 
+                        (click)="setTab('experience')"
+                        [ngClass]="{
+                            'bg-[rgb(209,131,169)] text-white': activeTab === 'experience',
+                            'text-[rgb(209,131,169)]': activeTab !== 'experience'
+                        }"
+                        class="px-4 py-2 rounded-lg text-sm transition">
+                        Work Experience
+                    </button>
+                </div>
             </div>
 
-            <div class="mb-5 ml-6 relative">
-                <span class="absolute -left-8 top-1 w-4 h-4 rounded-full bg-[rgb(209,131,169)] animate-bounce dark:bg-pink-400 ring-2 ring-white dark:ring-slate-900"></span>
-                <h3 class="text-xl font-semibold text-[rgb(113,85,122)] dark:text-white">
-                    Master’s Degree in Computer Science
-                </h3>
-                <p class="text-sm text-gray-500 dark:text-gray-300">Université de Madagascar — 2020-2022</p>
+      <!-- EDUCATION LIST -->
+            <div *ngIf="activeTab === 'education'" class="relative ml-6 border-l-2 border-[rgb(209,131,169)] dark:border-pink-400">
+                <div class="mb-5 ml-6 relative" *ngFor="let edu of educationList">
+                    <span class="absolute -left-8 top-1 w-4 h-4 rounded-full bg-[rgb(209,131,169)] animate-bounce dark:bg-pink-400 ring-2 ring-white dark:ring-slate-900"></span>
+                    <h3 class="text-lg font-semibold text-[rgb(113,85,122)] dark:text-white">{{ edu.title }}</h3>
+                    <p class="text-sm text-gray-500 dark:text-gray-300">{{ edu.institute }} — {{ edu.period }}</p>
+                </div>
+             </div>
+
+      <!-- WORK EXPERIENCE LIST -->
+            <div *ngIf="activeTab === 'experience'" class="relative ml-6 border-l-2 border-[rgb(209,131,169)] dark:border-pink-400">
+                <div class="mb-5 ml-6 relative" *ngFor="let exp of experienceList">
+                    <span class="absolute -left-8 top-1 w-4 h-4 rounded-full bg-[rgb(209,131,169)] animate-bounce dark:bg-pink-400 ring-2 ring-white dark:ring-slate-900"></span>
+                    <h3 class="text-lg font-semibold text-[rgb(113,85,122)] dark:text-white">{{ exp.title }}</h3>
+                    <p class="text-sm text-[rgb(209,131,169)]">{{ exp.institute }} — {{ exp.period }}</p>
+                    <ul class="list-disc ml-6 mt-2 text-sm text-gray-500 dark:text-gray-300 space-y-1">
+                        <li *ngFor="let task of exp.tasks">{{ task }}</li>
+                    </ul>
+                </div>
+            </div>
+
+    <!-- CERTIFICATIONS = -->
+            <div class="mt-8">
+                <h2 class="text-[25px] font-bold text-[rgb(209,131,169)] flex items-center gap-3 mb-4">
+                    <span class="material-symbols-outlined text-[28px]">workspace_premium</span>
+                    Certifications
+                </h2>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-start">
+                    <div *ngFor="let cert of certifications" class="flex flex-col items-center bg-[rgb(243,200,221)]/20 p-3 mt-6 rounded-xl border border-[rgb(243,200,221)] shadow-sm dark:bg-slate-800 text-center w-[200px] hover:scale-105 transition duration-300 cursor-default">
+                        <h4 class="text-lg font-semibold text-[rgb(209,131,169)] mb-1">{{ cert.name}}</h4>
+                        <span class="material-symbols-outlined text-3xl text-[rgb(113,85,122)] mb-1"> emoji_events</span>
+                        <p class="text-xs text-gray-500 dark:text-gray-300 mb-1">
+                            {{ cert.description}}
+                        </p>
+                        <p class="text-[11px] text-[rgb(209,131,169)] dark:text-gray-300 mb-1">
+                            {{ cert.place}}
+                        </p>
+                        <span class="text-[15px] text-gray-400 dark:text-gray-500">{{ cert.date}}</span>
+                    </div>
+                   
+                </div>
             </div>
         </div>
-
-       
-
         
 
-        <div class="space-y-6">
-            
-            <div class="bg-[rgb(243,200,221)]/10 p-6 rounded-2xl max-w-3xl font-sans text-slate-900 border border-[rgb(243,200,221)] shadow-sm">
 
-                <h2 class="text-2xl font-bold mb-6 tracking-tight flex items-center gap-3 text-[rgb(209,131,169)]">
+    <!-- RIGHT COLUMN: SKILLS -->
+        <div class="space-y-6">
+
+      <!-- FRONTEND SKILLS -->
+            <div class="bg-[rgb(243,200,221)]/10 p-6 rounded-2xl border border-[rgb(243,200,221)] shadow-sm dark:bg-slate-800">
+                <h2 class="text-2xl font-bold mb-6 flex items-center gap-3 text-[rgb(209,131,169)]">
                     <span class="material-symbols-outlined text-[25px] text-[rgb(209,131,169)]">web</span>
                     Frontend Skills
                 </h2>
-
                 <div class="flex flex-col sm:flex-row gap-6 items-start">
-
                     <div class="grid sm:grid-cols-2 gap-y-2 w-full sm:w-[190px]">
                         <img src="typescript.jpg" class="w-14 h-14 object-contain rounded-lg mx-auto">
                         <img src="HTML.png" class="w-14 h-14 object-contain rounded-lg mx-auto">
                         <img src="javascript.png" class="w-14 h-14 object-contain rounded-lg">
                         <img src="tailwind.png" class="w-14 h-14 object-contain rounded-lg">
                     </div>
-
                     <div class="w-full space-y-2">
                         <div class="group" *ngFor="let skill of frontendSkills">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="text-[14px] font-semibold text-slate-700 dark:text-gray-100">{{ skill.name }}</span>
+                            </div>
+                            <div class="h-1.5 w-full bg-slate-200 overflow-hidden">
+                                 <div class="h-full" [ngClass]="skill.color" [style.width.%]="skill.level"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+      <!-- BACKEND SKILLS -->
+            <div class="bg-[rgb(243,200,221)]/10 p-6 rounded-2xl border border-[rgb(243,200,221)] shadow-sm dark:bg-slate-800">
+                <h2 class="text-2xl font-bold mb-6 flex items-center gap-3 text-[rgb(209,131,169)]">
+                    <span class="material-symbols-outlined text-[25px] text-[rgb(209,131,169)]">dns</span>
+                        Backend Skills
+                </h2> 
+                <div class="flex flex-col sm:flex-row gap-6 items-start">
+
+                    <div class="grid sm:grid-cols-2 gap-y-3 w-full sm:w-[190px]">
+                        <img src="c++.png" class="w-14 h-14 object-contain rounded-lg mx-auto">
+                        <img src="python.png" class="w-14 h-14 object-contain rounded-lg">
+                        <img src="php.png" class="w-14 h-14 object-contain rounded-lg">
+                        <img src="nodejs.png" class="w-14 h-14 object-contain rounded-lg">
+                        <img src="java.png" class="w-14 h-14 object-contain rounded-lg mx-auto">
+                        <img src="odoo.png" class="w-14 h-14 object-contain rounded-lg mx-auto">
+                    </div>
+
+                    <div class="w-full space-y-2">
+                        <div class="group" *ngFor="let skill of backendSkills">
                             <div class="flex justify-between items-center mb-1">
                                 <span class="text-[14px] font-semibold text-slate-700 dark:text-gray-100">
                                     {{ skill.name }}
@@ -85,154 +168,28 @@
                             </div>
                         </div>
                     </div>
-
-                </div>
+                </div>            
             </div>
 
-            <div class="bg-[rgb(243,200,221)]/10 p-6 rounded-2xl max-w-3xl font-sans text-slate-900 border border-[rgb(243,200,221)] shadow-sm">
-
-                <h2 class="text-2xl font-bold mb-6 tracking-tight flex items-center gap-3 text-[rgb(209,131,169)]">
-                    <span class="material-symbols-outlined text-[25px] text-[rgb(209,131,169)]">dns</span>
-                    Backend Skills
-                </h2>
-                <div class="space-y-6">
-                    <div class="flex flex-col sm:flex-row gap-6 items-start">
-
-                        <div class="grid sm:grid-cols-2 gap-y-2 w-full sm:w-[190px]">
-                            <img src="mongodb.jpg" class="w-14 h-14 object-contain rounded-lg mx-auto">
-                            <img src="mysql.png" class="w-14 h-14 object-contain rounded-lg mx-auto">
-                            <img src="postgres.png" class="w-14 h-14 object-contain rounded-lg">
-                        </div>
-
-                        <div class="w-full space-y-2">
-                            <div class="group" *ngFor="let skill of DBSkills">
-                                <div class="flex justify-between items-center mb-1">
-                                    <span class="text-[14px] font-semibold text-slate-700 dark:text-gray-100">
-                                        {{ skill.name }}
-                                    </span>
-                                </div>
-
-                                <div class="h-1.5 w-full bg-slate-200  overflow-hidden">
-                                    <div
-                                        class="h-full"
-                                        [ngClass]="skill.color"
-                                        [style.width.%]="skill.level">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                     <div class="flex flex-col sm:flex-row gap-6 items-start">
-
-                        <div class="grid sm:grid-cols-2 gap-y-3 w-full sm:w-[190px]">
-                            <img src="c++.png" class="w-14 h-14 object-contain rounded-lg mx-auto">
-                            <img src="python.png" class="w-14 h-14 object-contain rounded-lg">
-                            <img src="php.png" class="w-14 h-14 object-contain rounded-lg">
-                            <img src="nodejs.png" class="w-14 h-14 object-contain rounded-lg">
-                            <img src="java.png" class="w-14 h-14 object-contain rounded-lg mx-auto">
-                            <img src="odoo.png" class="w-14 h-14 object-contain rounded-lg mx-auto">
-                        </div>
-
-                        <div class="w-full space-y-2">
-                            <div class="group" *ngFor="let skill of backendSkills">
-                                <div class="flex justify-between items-center mb-1">
-                                    <span class="text-[14px] font-semibold text-slate-700 dark:text-gray-100">
-                                        {{ skill.name }}
-                                    </span>
-                                </div>
-
-                                <div class="h-1.5 w-full bg-slate-200  overflow-hidden">
-                                    <div
-                                        class="h-full"
-                                        [ngClass]="skill.color"
-                                        [style.width.%]="skill.level">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                          
-
-                </div>
-
-            </div>
-
-
-            <div class="bg-[rgb(243,200,221)]/10 p-6 rounded-2xl max-w-3xl border border-[rgb(243,200,221)] shadow-sm">
-
+      <!-- TOOLS & DEVOPS -->
+            <div class="bg-[rgb(243,200,221)]/10 p-6 rounded-2xl border border-[rgb(243,200,221)] shadow-sm dark:bg-slate-800">
                 <h2 class="text-2xl font-bold mb-6 flex items-center gap-3 text-[rgb(209,131,169)]">
                     <span class="material-symbols-outlined text-[25px]">build</span>
-                    Tools & DevOps
+                        Tools & DevOps
                 </h2>
-
                 <div class="flex flex-wrap gap-3">
-
-                    <div class="px-4 py-2 rounded-lg bg-white dark:bg-slate-800 
+                    <div *ngFor="let tool of tools" class="px-4 py-2 rounded-lg bg-white dark:bg-slate-800 
                                 border border-[rgb(243,200,221)] 
                                 text-sm font-medium 
                                 hover:scale-105 transition duration-300 cursor-default">
-                        Git
+                            {{ tool.name }}
                     </div>
-
-      
-
-                    <div class="px-4 py-2 rounded-lg bg-white dark:bg-slate-800 
-                                border border-[rgb(243,200,221)] 
-                                text-sm font-medium 
-                                hover:bg-[rgb(209,131,169)] hover:text-white
-                                hover:scale-105 transition duration-300 cursor-default">
-                        Docker
-                    </div>
-
-                    <div class="px-4 py-2 rounded-lg bg-white dark:bg-slate-800 
-                                border border-[rgb(243,200,221)] 
-                                text-sm font-medium 
-                                hover:bg-[rgb(209,131,169)] hover:text-white
-                                hover:scale-105 transition duration-300 cursor-default">
-                        Postman
-                    </div>
-
-
-                    <div class="px-4 py-2 rounded-lg bg-white dark:bg-slate-800 
-                                border border-[rgb(243,200,221)] 
-                                text-sm font-medium 
-                                hover:bg-[rgb(209,131,169)] hover:text-white
-                                hover:scale-105 transition duration-300 cursor-default">
-                        Adobe XD
-                    </div>
-
-                    <div class="px-4 py-2 rounded-lg bg-white dark:bg-slate-800 
-                                border border-[rgb(243,200,221)] 
-                                text-sm font-medium 
-                                hover:bg-[rgb(209,131,169)] hover:text-white
-                                hover:scale-105 transition duration-300 cursor-default">
-                        Canva
-                    </div>
-
                 </div>
             </div>
 
         </div>
 
     </div>
-
-</section>
-<section class="max-w-7xl mx-auto px-6 py-20">
-    <h2 class="text-4xl font-bold mb-12 text-[rgb(209,131,169)]">Educations</h2>
-    <div class="relative border-l-2 border-[rgb(209,131,169)] dark:border-pink-400 ml-4">
-        <div class="mb-10 ml-8 relative">
-            <span class="absolute -left-10 top-1 w-4 h-4 rounded-full bg-[rgb(209,131,169)] animate-bounce dark:bg-pink-400 ring-2 ring-white dark:ring-slate-900 "></span>
     
-            <h3 class="text-xl font-semibold text-[rgb(113,85,122)] dark:text-white">Master’s Degree in Computer Science</h3>
-            <p class="text-sm text-gray-500 dark:text-gray-300">Université de Madagascar — 2020-2022</p>
-            <p class="mt-2 text-gray-600 dark:text-gray-200">
-                Spécialisation en développement web et systèmes distribués. Projets de fin d’études incluant applications full stack et bases de données.
-            </p>
-        </div>
 
-    </div>
 </section>

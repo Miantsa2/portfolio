@@ -48,7 +48,7 @@ export class Profile {
    
   ];
 
-   backendSkills = [
+  backendSkills = [
     {
       name: 'C++',
       level: 90,
@@ -81,6 +81,92 @@ export class Profile {
     },
    
   ];
+
+  activeTab: 'education' | 'experience' = 'education';
+  educationList = [
+    {
+      title: "Master’s Degree in Computer Science",
+      institute: "IT University Madagascar",
+      period: "Present"
+    },
+    {
+      title: "Bachelor's Degree in Computer Science",
+      institute: "IT University Madagascar",
+      period: "2022 - 2025"
+    },
+    {
+      title: "High School Diploma Series C",
+      institute: "ESCA Madagascar",
+      period: "2021 - 2022"
+    }
+  ];
+
+  experienceList = [
+    {
+      title: "Odoo Developer Intern",
+      institute: "Etech Consulting Madagascar",
+      period: "06/2025 - 08/2025",
+      tasks: [
+        "Immersed in a professional environment within an IT services company (ESN)",
+        "Development, customization, and maintenance of Odoo modules",
+        "Contributed to various client projects across different sectors and collaborated in an agile methodology within a multidisciplinary team",
+        "Performed testing, debugging, and optimization of existing features"
+      ]
+    },
+  ];
+
+  tools = [
+    {
+      name: "GIT"
+    },
+    {
+      name: "Docker"
+    },
+    {
+      name: "Postman"
+    },
+    {
+      name: "Adobe XD"
+    },
+    {
+      name: "Canva"
+    },
+  ];
+
+  certifications=[
+    {
+      name: "ODOO",
+      description: " Odoo module development, customization, and maintenance.",
+      place:"ArkeUp Academy",
+      date:"2025"
+
+    },
+     {
+      name: "DELF B2",
+      description: "French language B2 proficiency certification.",
+      place:"Alliance Française Madagascar",
+      date:"2025"
+
+    }
+  ]
+
+
+  ngOnInit() {
+    if (typeof window !== 'undefined') {
+      const savedTab = localStorage.getItem('activeTab');
+      this.activeTab = savedTab === 'experience' ? 'experience' : 'education';
+    }
+  }
+
+  setTab(tab: 'education' | 'experience') {
+    this.activeTab = tab;
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('activeTab', tab);
+    }
+  }
+
+
+
   
 }
 
