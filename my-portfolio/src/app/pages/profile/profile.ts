@@ -66,7 +66,7 @@ export class Profile {
     },
     {
       name: 'NodeJS',
-      level: 85,
+      level: 88,
       color: 'bg-blue-500'
     },
     {
@@ -76,7 +76,7 @@ export class Profile {
     },
     {
       name: 'Odoo',
-      level: 80,
+      level: 85,
       color: 'bg-[rgb(75,21,53)]'
     },
    

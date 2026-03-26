@@ -4,6 +4,8 @@ import { Header } from './layout/header/header';
 import { MainLayout } from './layout/main-layout/main-layout';
 import { Profile } from './pages/profile/profile';
 import { Project } from './pages/project/project';
+import { Contact } from './pages/contact/contact';
+
 
 export const routes: Routes = [
  { path: '', redirectTo: 'main-layout', pathMatch: 'full' },
@@ -28,6 +30,11 @@ export const routes: Routes = [
        {
         path: 'projects',
         component: Project
+      },
+
+        {
+        path: 'contact',
+        component: Contact
       },
      ]
  }, 
