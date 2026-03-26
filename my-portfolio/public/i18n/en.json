@@ -1,0 +1,36 @@
+{
+  "NAV": {
+    "HOME": "Home",
+    "PROFILE": "Profile",
+    "PROJECTS": "Projects",
+    "CONTACT": "Contact",
+    "HIRE_ME": "Hire Me",
+    "PORTFOLIO": "MY PORTFOLIO"
+
+  },
+   "settings":{
+    "preference":"Preferences",
+    "mode":"Interface Mode"
+
+  },
+
+  "HOME":{
+    "state":"Open for new collaborations",
+    "title1":"Scalable digital solutions",
+    "title2":"crafted to turn your ideas into reality",
+    "description1":"Passionate about creating digital solutions and driven by innovation,",
+    "description2":"I am a Full Stack Developer specializing in building scalable, user-focused web applications, capable of turning complex ideas into impactful digital experiences.",
+    "work":"View my work",
+    "cv":"Download my CV"
+  },
+   "PROFILE":{
+    "tilte":"Passionate about creating digital solutions and driven by innovation,I am a Full Stack developer specialized in building scalable and user-centered web applications.",
+    "work_experience":"Work experience",
+    "description1":"Passionate about creating digital solutions and driven by innovation,",
+    "description2":"I am a Full Stack Developer specializing in building scalable, user-focused web applications, capable of turning complex ideas into impactful digital experiences.",
+    "work":"View my work",
+    "cv":"Download my CV"
+
+  }
+  
+}

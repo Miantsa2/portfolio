@@ -1,0 +1,31 @@
+{
+  "NAV": {
+    "HOME": "Accueil",
+    "PROFILE": "Profil",
+    "PROJECTS": "Projets",
+    "CONTACT": "Contact",
+    "HIRE_ME": "Me recruter",
+    "PORTFOLIO": "MON PORTFOLIO"
+  },
+  "settings": {
+    "preference": "Préférences",
+    "mode": "Mode d'interface"
+  },
+  "HOME": {
+    "state": "Ouvert à de nouvelles collaborations",
+    "title1": "Des solutions numériques évolutives",
+    "title2": "conçues pour transformer vos idées en réalité",
+    "description1": "Passionné par la création de solutions numériques et guidé par l'innovation,",
+    "description2": "Je suis un développeur Full Stack spécialisé dans la création d'applications web évolutives et centrées sur l'utilisateur, capable de transformer des idées complexes en expériences numériques percutantes.",
+    "work": "Voir mon travail",
+    "cv": "Télécharger mon CV"
+  },
+  "PROFILE": {
+    "tilte": "Passionné par la création de solutions numériques et guidé par l'innovation, je suis un développeur Full Stack spécialisé dans la construction d'applications web évolutives et centrées sur l'utilisateur.",
+    "work_experience": "Expérience professionnelle",
+    "description1": "Passionné par la création de solutions numériques et guidé par l'innovation,",
+    "description2": "Je suis un développeur Full Stack spécialisé dans la création d'applications web évolutives et centrées sur l'utilisateur, capable de transformer des idées complexes en expériences numériques percutantes.",
+    "work": "Voir mon travail",
+    "cv": "Télécharger mon CV"
+  }
+}

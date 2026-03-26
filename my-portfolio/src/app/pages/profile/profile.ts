@@ -1,15 +1,21 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 
 @Component({
   selector: 'app-profile',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './profile.html',
   styleUrl: './profile.css',
 })
 export class Profile {
+
+  constructor(private translate: TranslateService) {}
+
+ 
+
 
   frontendSkills = [
     {

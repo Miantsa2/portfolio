@@ -167,15 +167,27 @@
 </div>
   <hr class="border mb-6 dark:border-[rgb(209,131,169)] ">
 
-  <div>
-    <p class="text-sm  font-medium mb-3 tracking-wide">Language</p>
-    <div class="grid grid-cols-2 gap-2">
-      <button class="text-xs py-2 px-3 rounded-lg border border-[rgb(209,131,169)] bg-[rgb(209,131,169)]/10 text-[rgb(209,131,169)] font-bold transition-all hover:bg-[rgb(209,131,169)] hover:text-white">
-        ENGLISH
-      </button>
-      <button class="text-xs py-2 px-3 rounded-lg border border-white/10 text-gray-400 font-bold transition-all hover:bg-[rgb(209,131,169)] hover:hover:text-white">
-        FRENCH
-      </button>
-    </div>
-  </div>
+  <div class="grid grid-cols-2 gap-2">
+  <button 
+    (click)="switchLanguage('en')"
+    class="text-xs py-2 px-3 rounded-lg border font-bold transition-all"
+    [ngClass]="{
+      'bg-[rgb(209,131,169)] text-white border-[rgb(209,131,169)]': translate.currentLang === 'en',
+      'text-[rgb(209,131,169)] border-[rgb(209,131,169)]/10': translate.currentLang !== 'en'
+    }"
+  >
+    ENGLISH
+  </button>
+
+  <button 
+    (click)="switchLanguage('fr')"
+    class="text-xs py-2 px-3 rounded-lg border font-bold transition-all"
+    [ngClass]="{
+      'bg-[rgb(209,131,169)] text-white border-[rgb(209,131,169)]': translate.currentLang === 'fr',
+      'text-[rgb(209,131,169)] border-[rgb(209,131,169)]/10': translate.currentLang !== 'fr'
+    }"
+  >
+    FRENCH
+  </button>
+</div>
 </div>
