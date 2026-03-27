@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 export interface ProjectData {
   id: number;
@@ -19,12 +20,15 @@ export interface ProjectData {
 
 @Component({
   selector: 'app-project',
+  standalone:true,
+  imports:[TranslateModule],
   templateUrl: './project.html',
   styleUrls: ['./project.css'], // correction ici
 })
 
-export class Project { // renommée pour éviter conflit avec interface
+export class Project { 
 
+  
   projects: ProjectData[] = [
     {
       id: 1,
