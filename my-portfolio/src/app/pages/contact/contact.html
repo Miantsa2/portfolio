@@ -10,16 +10,16 @@
 
             <p class="flex items-center gap-4 text-md font-semibold uppercase animate-pulse text-gray-500 ">
                 <span class="material-symbols-outlined">forum</span>
-                Let’s work together
+                {{ 'CONTACT.title' | translate }}
             </p>
 
             <div class="space-y-4">
-                <h1 class="text-5xl font-bold text-[rgb(209,131,169)]">Contact me</h1>
+                <h1 class="text-5xl font-bold text-[rgb(209,131,169)]">{{ 'CONTACT.desc' | translate }}</h1>
                 <div class="w-16 h-1 bg-[rgb(209,131,169)]"></div>
             </div>
 
             <p class="max-w-xl text-gray-600 leading-relaxed dark:text-gray-100">
-                Have something in mind or just want to connect? I’m always open to discussing new opportunities.
+                {{ 'CONTACT.desc2' | translate }}
             </p>
 
             <div class="space-y-4 text-gray-700 dark:text-gray-200">
@@ -27,7 +27,7 @@
             <div class="flex items-start gap-4">
                 <span class="material-symbols-outlined text-[rgb(209,131,169)] text-2xl">call</span>
                 <div>
-                    <p class="text-xs font-semibold uppercase text-[rgb(209,131,169)]">Phone</p>
+                    <p class="text-xs font-semibold uppercase text-[rgb(209,131,169)]">{{ 'CONTACT.phone' | translate }}</p>
                     <p class="text-base text-gray-500 font-medium">+261 34 06 065 82</p>
                 </div>
             </div>
@@ -43,7 +43,7 @@
             <div class="flex items-start gap-4">
                 <span class="material-symbols-outlined text-[rgb(209,131,169)] text-2xl">location_on</span>
                 <div>
-                    <p class="text-xs font-semibold uppercase text-[rgb(209,131,169)]">Location</p>
+                    <p class="text-xs font-semibold uppercase text-[rgb(209,131,169)]">{{ 'CONTACT.location' | translate }}</p>
                     <p class="text-gray-500 font-medium">Antananarivo, Madagascar</p>
                 </div>
             </div>
@@ -56,7 +56,7 @@
             <a href="cv/CV_Ranaivoson_Miantsa.pdf" download="CV_Ranaivoson_Miantsa.pdf">
                 <button class="flex items-center gap-2 bg-gradient-to-r from-[rgb(243,200,221)] to-[rgb(75,21,53)] text-white font-semibold py-3 px-6 rounded-xl transition-all shadow-lg hover:scale-105">
                     <span class="material-symbols-outlined">download</span>
-                    Download CV
+                    {{ 'HOME.cv' | translate }}
                 </button>
             </a>
             <div class="flex items-center gap-4">
@@ -96,25 +96,25 @@
         <form class="space-y-6"  (ngSubmit)="sendEmail(form)"  #form="ngForm">
 
             <div>
-                <label class="block text-gray-500 text-sm mb-2">Name</label>
-                <input type="text" placeholder="Your name" name="user_name" [(ngModel)]="user.name" 
+                <label class="block text-gray-500 text-sm mb-2">{{ 'CONTACT.name' | translate }}</label>
+                <input type="text" placeholder="{{ 'CONTACT.name' | translate }}" name="user_name" [(ngModel)]="user.name" 
                     class="w-full bg-gray-100 dark:bg-slate-700/50  rounded-full p-4 text-gray-500 dark:text-white focus:ring-2 focus:ring-[rgb(209,131,169)] outline-none">
             </div>
 
             <div>
                 <label class="block text-gray-500 text-sm mb-2">Email</label>
-                <input type="email" placeholder="your@email.com" name="user_email"  [(ngModel)]="user.email" required
+                <input type="email" placeholder="email@gmail.com" name="user_email"  [(ngModel)]="user.email" required
                     class="w-full bg-gray-100 dark:bg-slate-700/50  rounded-full p-4 text-gray-500 dark:text-white focus:ring-2 focus:ring-[rgb(209,131,169)] outline-none">
             </div>
 
             <div>
                 <label class="block text-gray-500 text-sm mb-2">Message</label>
-                <textarea rows="4" placeholder="Your message..."  name="user_message" [(ngModel)]="user.message" required
+                <textarea rows="4" placeholder="Message..."  name="user_message" [(ngModel)]="user.message" required
                     class="w-full bg-gray-100 dark:bg-slate-700/50  rounded-2xl p-4 text-gray-500 dark:text-white focus:ring-2 focus:ring-[rgb(209,131,169)] outline-none"></textarea>
             </div>
 
             <button type="submit" class="w-full bg-[rgb(209,131,169)] hover:scale-105 text-white font-bold py-4 rounded-full transition-all disabled:opacity-50 disabled:cursor-not-allowed" [disabled]="form.invalid">
-                    Send Message
+                    {{ 'CONTACT.submit' | translate }}
             </button>
 
         </form>
@@ -124,10 +124,6 @@
 </div>
 
 
-<!-- Fenêtre de confirmation -->
-
-
-
 <div *ngIf="success"  class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/50 backdrop-blur-sm">
   <div class="bg-white dark:bg-gray-900 rounded-xl p-8 max-w-sm w-full text-center shadow-lg animate-fadeIn">
     
@@ -135,10 +131,10 @@
       <span class="material-symbols-outlined">check_circle</span>
     </div>
     
-    <h3 class="text-xl font-bold mb-2 text-gray-800 dark:text-white">SUCCESS !</h3>
+    <h3 class="text-xl font-bold mb-2 uppercase text-gray-800 dark:text-white">{{ 'CONTACT.success' | translate }} !</h3>
     
      <p class="text-sm text-gray-600 leading-relaxed dark:text-gray-100">
-        I am committed to replying to you as soon as possible
+        {{ 'CONTACT.success_desc' | translate }}
     </p>
 
     <button 

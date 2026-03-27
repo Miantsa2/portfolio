@@ -1,0 +1,118 @@
+{
+  "NAV": {
+    "HOME": "Accueil",
+    "PROFILE": "Profil",
+    "PROJECTS": "Projets",
+    "CONTACT": "Contact",
+    "HIRE_ME": "Me recruter",
+    "PORTFOLIO": "MON PORTFOLIO"
+  },
+  "settings": {
+    "preference": "Préférences",
+    "mode": "Mode d'interface",
+    "lg_en":"ANGLAIS",
+    "lg_fr":"FRANCAIS"
+  },
+  "HOME": {
+    "state": "Ouverte à de nouvelles collaborations",
+    "title1": "Des solutions numériques",
+    "title2": "conçues pour transformer vos idées en réalité",
+    "description1": "Passionné par la création de solutions numériques et guidé par l'innovation,",
+    "description2": "Je suis un développeur Full Stack spécialisé dans la création d'applications web évolutives et centrées sur l'utilisateur, capable de transformer des idées complexes en expériences numériques percutantes.",
+    "work": "Voir mon travail",
+    "cv": "Télécharger mon CV"
+  },
+  "PROFILE": {
+    "title": "Passionné par la création de solutions numériques et guidé par l'innovation, je suis un développeur Full Stack spécialisé dans la construction d'applications web évolutives et centrées sur l'utilisateur.",
+    "work_experience": "Expérience professionnelle",
+    "skills_front":"Compétences Frontend ",
+    "skills_back": " Compétences Backend",
+    "tools":"Outils & DevOps"
+  },
+  "PROJECTS": {
+    "title": "Découvrez une sélection de mes projets illustrant mes compétences en développement full-stack, ma capacité de résolution de problèmes et mes solutions innovantes.",
+    "schedule": "Durée",
+    "person": "Équipe",
+    "website": "Site",
+    "feature": "Fonctionnalités",
+    "technologies": "Technologies utilisées",
+
+    "project1_title": "Application Web de Gestion de Centre Commercial",
+    "project1_schedule": "1 mois",
+    "project1_person": "Équipe de 2",
+    "project1_desc": "Conception et développement d'une application web de gestion de centre commercial avec gestion multi-rôles (Admin, Boutique, Client).",
+    "project1_feature1": "Authentification sécurisée (JWT, contrôle d'accès basé sur les rôles)",
+    "project1_feature2": "Gestion des halls et des boutiques",
+    "project1_feature3": "Gestion des produits (stockables / non-stockables, promotions, parrainage)",
+    "project1_feature4": "Système de paiement en ligne par carte bancaire",
+    "project1_feature5": "Gestion d'événements avec flux de validation",
+    "project1_feature6": "Tableau de bord avec indicateurs clés (KPI) et visualisation de données",
+    "project1_feature7": "Système de notifications en temps réel",
+    "project1_feature8": "Gestion des ventes, des livraisons et facturation PDF",
+
+    "project2_title1": "Framework Sprint",
+    "project2_schedule": "3 mois",
+    "project2_person": "Solo",
+    "project2_desc": "Développement d'un framework web modulaire et évolutif conçu pour le développement rapide d'applications.",
+    "project2_feature1": "Routage personnalisé basé sur les annotations pour une correspondance claire des points d'entrée (endpoints)",
+    "project2_feature2": "Scan et enregistrement automatique des contrôleurs via le pattern Singleton",
+    "project2_feature3": "Séparation claire de la logique de vue grâce au pattern Modèle-Vue",
+    "project2_feature4": "Support du déploiement facilité sur serveurs Tomcat",
+    "project2_feature5": "Conversion et liaison automatique des paramètres de requête",
+    "project2_feature6": "Scripts de déploiement automatisés",
+    
+    "project2_title2": "Conception d'une application Proof-of-Concept (PoC) basée sur le framework :",
+    "project2_feature7": "Liste des vols et nombre de sièges disponibles",
+    "project2_feature8": "Réservation et annulation de billets d'avion",
+    "project2_feature9": "Promotion et vente de billets d'avion",
+    "project2_feature10": "Importation de fichiers PDF et multimédia",
+   
+    "project3_title": "Plateforme Web et Mobile de Crypto-monnaie",
+    "project3_schedule": "1 mois",
+    "project3_person": "Équipe de 4",
+    "project3_desc": "Développement d'un système complet de gestion de crypto-monnaies.",
+    "project3_feature1": "Fournisseur d'identité sécurisé (authentification multi-facteurs, validation d'e-mail, gestion des rôles)",
+    "project3_feature2": "Plateforme d'achat et de vente de crypto-monnaies",
+    "project3_feature3": "Gestion de portefeuille (Portfolio) de crypto-monnaies",
+    "project3_feature4": "Cours et analyses des prix en temps réel",
+    "project3_feature5": "Dépôt et retrait de fonds",
+    "project3_title2": "Application mobile pour les utilisateurs",
+
+    "project4_title": "Plateforme Web de gestion de boulangerie",
+    "project4_schedule": "1 mois",
+    "project4_person": "Équipe de 2",
+    "project4_desc": "Conception et développement d'une application de gestion pour boulangerie.",
+    "project4_feature1": "Gestion des ventes",
+    "project4_feature2": "Gestion des stocks et suivi des matières premières",
+    "project4_feature3": "Gestion des clients, promotions et offres personnalisées",
+    "project4_feature4": "Gestion de la production avec suivi des recettes"
+  },
+  "CONTACT": {
+    "title": "Travaillons ensemble",
+    "desc": "Contactez-moi",
+    "desc2": "Vous avez un projet en tête ou vous souhaitez simplement échanger ? Je suis toujours ouverte à la discussion de nouvelles opportunités.",
+    "phone": "Téléphone",
+    "location": "Adresse",
+    "name": "Nom",
+    "submit": "Envoyer le message",
+    "success": "Succès",
+    "success_desc": "Je m'engage à vous répondre dans les plus brefs délais."
+  },
+  "EDUCATION": {
+    "master": "Master en Informatique",
+    "bachelor": "Licence en Informatique",
+    "school": "Baccalauréat Série C",
+    "odoo_intern_title": "Stagiaire Développeur Odoo",
+    "odoo_env": "Immersion dans un environnement professionnel de services informatiques",
+    "odoo_dev": "Développement, personnalisation et maintenance de modules Odoo",
+    "agile_team": "Collaboration Agile au sein d'une équipe pluridisciplinaire",
+    "testing_optimization": "Tests, débogage et optimisation des fonctionnalités",
+    "certification1": "Développement, personnalisation et maintenance de modules Odoo.",
+    "certification2": "Certification de maîtrise de la langue française (niveau B2).",
+    "certification3": "Certification de maîtrise de la langue française (niveau A2)."
+
+  }
+  
+  
+
+}

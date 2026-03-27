@@ -10,31 +10,31 @@
       <span class="w-2.5 h-2.5 rounded-full bg-[rgb(209,131,169)] animate-pulse"></span>
 
       <span class="text-xs uppercase tracking-wide">
-        Open for new collaborations
+        {{ 'HOME.state' | translate }}
       </span>
     </div>
 
 
     <h1 class="text-3xl md:text-6xl font-extrabold  dark:text-white mb-8 leading-snug md:leading-tight max-w-3xl mx-auto">
-      <span class="block text-[rgb(209,131,169)]">Scalable digital solutions</span>
-      <span class="block">crafted to turn your ideas into reality</span>
+      <span class="block text-[rgb(209,131,169)]">{{ 'HOME.title1' | translate }}</span>
+      <span class="block">{{ 'HOME.title2' | translate }}</span>
     
     </h1>
 
     <p class="text-lg text-gray-600 dark:text-gray-100 max-w-2xl mx-auto">
-      Passionate about creating digital solutions and driven by innovation,
-      <span class="block"> I am a Full Stack Developer specializing in building scalable, user-focused web applications, capable of turning complex ideas into impactful digital experiences.</span>
+      {{ 'HOME.description1' | translate }}
+      <span class="block"> {{ 'HOME.description2' | translate }}</span>
     </p>
 
     <div class="mt-14 flex justify-center gap-10">
 
-     <button class="text-m py-3 px-6 rounded-lg  bg-[rgb(209,131,169)] text-white transition-all hover:bg-[rgb(243,200,221)] hover:text-black  flex items-center gap-2">
-        View my work 
+     <button routerLink="/main-layout/projects" class="text-m py-3 px-6 rounded-lg  bg-[rgb(209,131,169)] text-white transition-all hover:bg-[rgb(243,200,221)] hover:text-black  flex items-center gap-2">
+        {{ 'HOME.work' | translate }} 
         <span class="material-symbols-outlined text-[20px]">arrow_forward</span>  
       </button>
       <a href="cv/CV_Ranaivoson_Miantsa.pdf" download="CV_Ranaivoson_Miantsa.pdf">
         <button class="text-m py-3 px-6 rounded-lg border border-[rgb(243,200,221)] transition-all hover:bg-[rgb(243,200,221)] hover:text-white flex items-center gap-3">
-          Download my CV
+          {{ 'HOME.cv' | translate }}
           <span class="material-symbols-outlined text-[20px]">download</span> 
         </button>
       </a>

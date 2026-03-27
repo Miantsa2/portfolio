@@ -2,9 +2,9 @@
 
     <!-- Header -->
     <div class="flex flex-col items-center text-center mb-12 mt-9">
-        <h1 class="text-4xl sm:text-5xl font-bold mb-4 text-[rgb(209,131,169)]">Projects</h1>
+        <h1 class="text-4xl sm:text-5xl font-bold mb-4 text-[rgb(209,131,169)]">{{ 'NAV.PROJECTS' | translate }}</h1>
         <p class="text-gray-600 leading-relaxed dark:text-gray-100 max-w-2xl">
-            Discover a selection of my projects showcasing full-stack development skills, creative problem-solving, and innovative solutions.
+           {{ 'PROJECTS.title' | translate }}
         </p>
     </div>
 
@@ -14,13 +14,13 @@
             <div class="flex items-center gap-4 text-[rgb(209,131,169)]">
                 <span class="text-5xl sm:text-6xl font-bold opacity-40">01</span>
                 <div>
-                    <p class="text-lg sm:text-xl font-semibold">Shopping Mall Management Web Application</p>
+                    <p class="text-lg sm:text-xl font-semibold">{{ 'PROJECTS.project1_title' | translate }} </p>
                     <div class="flex gap-2 mt-2 flex-wrap">
                         <div class="flex items-center gap-1 px-2 py-1 text-xs text-gray-600 dark:text-white">
-                            <span class="material-symbols-outlined text-[14px]">schedule</span> 1 month
+                            <span class="material-symbols-outlined text-[14px]">schedule</span> {{ 'PROJECTS.project1_schedule' | translate }}
                         </div>
                         <div class="flex items-center gap-1 px-2 py-1 text-xs rounded-full bg-[rgb(243,200,221)]/40 text-gray-600 dark:text-white">
-                            <span class="material-symbols-outlined text-[14px]">person</span> Team of 2
+                            <span class="material-symbols-outlined text-[14px]">person</span> {{ 'PROJECTS.project1_person' | translate }}
                         </div>
                     </div>
                 </div>
@@ -29,7 +29,7 @@
             <div class="flex flex-col sm:flex-row justify-center sm:justify-start gap-3 w-full sm:w-auto">
                 <a href="https://m1p13mean-miantsa-isaia.netlify.app/" target="_blank"
                    class="flex items-center justify-center gap-2 px-5 py-2 bg-[rgb(209,131,169)] text-white rounded-xl text-sm sm:text-sm md:text-base font-bold hover:bg-white hover:text-[rgb(209,131,169)] border border-[rgb(209,131,169)] w-full sm:w-auto">
-                   <span class="material-symbols-outlined text-[22px]">open_in_new</span> Website
+                   <span class="material-symbols-outlined text-[22px]">open_in_new</span> {{ 'PROJECTS.website' | translate }}
                 </a>
                 <a href="https://github.com/Miantsa2/m1p13mean-Isaia-Miantsa-frontend/tree/dev" target="_blank"
                    class="flex items-center justify-center gap-2 px-5 py-2 border border-[rgb(209,131,169)] rounded-xl text-sm sm:text-sm md:text-base text-gray-600 font-bold hover:bg-[rgb(209,131,169)] hover:text-white transition w-full sm:w-auto">
@@ -45,24 +45,24 @@
 
             <div class="col-span-1 sm:col-span-8 flex flex-col justify-center gap-4">
                 <p class="text-gray-600 dark:text-gray-200 leading-relaxed max-w-2xl">
-                    Design and development of a shopping mall management web application with multi-role management (Admin, Store, Customer).
+                    {{ 'PROJECTS.project1_desc' | translate }}
                 </p>
                 <h4 class="text-sm font-semibold text-[rgb(209,131,169)] mb-1 flex items-center gap-2">
-                    <span class="material-symbols-outlined text-[18px]">auto_awesome</span> Features
+                    <span class="material-symbols-outlined text-[18px]">auto_awesome</span> {{ 'PROJECTS.feature' | translate }}
                 </h4>
                 <ul class="list-disc pl-5 text-gray-500 dark:text-gray-400 space-y-1 text-sm">
-                    <li>Secure authentication (JWT, role-based access control)</li>
-                    <li>Management of halls and stores</li>
-                    <li>Product management (stockable / non-stockable, promotions, sponsorship)</li>
-                    <li>Online payment system using credit cards</li>
-                    <li>Event management with validation workflow</li>
-                    <li>Dashboard with KPIs and data visualization</li>
-                    <li>Real-time notification system</li>
-                    <li>Management of sales, deliveries, and PDF invoicing</li>
+                    <li>{{ 'PROJECTS.project1_feature1' | translate }}</li>
+                    <li>{{ 'PROJECTS.project1_feature2' | translate }}</li>
+                    <li>{{ 'PROJECTS.project1_feature3' | translate }}</li>
+                    <li>{{ 'PROJECTS.project1_feature4' | translate }}</li>
+                    <li>{{ 'PROJECTS.project1_feature5' | translate }}</li>
+                    <li>{{ 'PROJECTS.project1_feature6' | translate }}</li>
+                    <li>{{ 'PROJECTS.project1_feature7' | translate }}</li>
+                    <li>{{ 'PROJECTS.project1_feature8' | translate }}</li>
                 </ul>
 
                 <h4 class="text-sm font-semibold text-[rgb(209,131,169)] mb-1 flex items-center gap-2 mt-4">
-                    <span class="material-symbols-outlined text-[18px]">memory</span> Technologies Used
+                    <span class="material-symbols-outlined text-[18px]">memory</span> {{ 'PROJECTS.technologies' | translate }}
                 </h4>
                 <div class="flex flex-wrap gap-3 mt-3">
                     <div class="px-4 py-2 rounded-lg bg-white dark:bg-slate-800 dark:text-white border border-[rgb(243,200,221)] text-sm font-medium text-gray-500 hover:scale-105 transition duration-300 cursor-default">MongoDB</div>
@@ -81,14 +81,14 @@
             <div class="flex items-center gap-4 text-[rgb(209,131,169)]">
                 <span class="text-5xl sm:text-6xl font-bold opacity-40">02</span>
                 <div>
-                    <p class="text-lg sm:text-xl font-semibold">Framework Sprint</p>
+                    <p class="text-lg sm:text-xl font-semibold">{{ 'PROJECTS.project2_title1' | translate }}</p>
 
                     <div class="flex gap-2 mt-2 flex-wrap">
                         <div class="flex items-center gap-1 px-2 py-1 text-xs text-gray-600 dark:text-white">
-                            <span class="material-symbols-outlined text-[14px]">schedule</span> 3 months
+                            <span class="material-symbols-outlined text-[14px]">schedule</span> {{ 'PROJECTS.project2_schedule' | translate }}
                         </div>
                         <div class="flex items-center gap-1 px-2 py-1 text-xs rounded-full bg-[rgb(243,200,221)]/40 text-gray-600 dark:text-white">
-                            <span class="material-symbols-outlined text-[14px]">person</span> Solo
+                            <span class="material-symbols-outlined text-[14px]">person</span> {{ 'PROJECTS.project2_person' | translate }}
                         </div>
                     </div>
                 </div>
@@ -112,7 +112,7 @@
 
                 <div class="mt-5 w-full">
                     <h4 class="text-sm font-semibold text-[rgb(209,131,169)] mb-1 flex items-center gap-2">
-                        <span class="material-symbols-outlined text-[18px]">memory</span> Technologies Used
+                        <span class="material-symbols-outlined text-[18px]">memory</span> {{ 'PROJECTS.technologies' | translate }}
                     </h4>
                     <div class="flex flex-wrap gap-3 mt-3">
                         <div class="px-4 py-2 rounded-lg bg-white dark:bg-slate-800 dark:text-white border border-[rgb(243,200,221)] text-sm font-medium text-gray-500 hover:scale-105 transition duration-300 cursor-default">JAVA</div>
@@ -127,34 +127,33 @@
     <!-- Description & Features -->
             <div class="col-span-1 sm:col-span-8 flex flex-col justify-center gap-4">
                 <p class="text-gray-600 dark:text-gray-200 max-w-2xl">
-                    Development of a modular and scalable web application framework designed for rapid development
-                </p>
+                   {{ 'PROJECTS.project2_desc' | translate }}
 
                 <div>
                     <h4 class="text-sm font-semibold text-[rgb(209,131,169)] mb-1 flex items-center gap-2">
-                        <span class="material-symbols-outlined text-[18px]">auto_awesome</span> Features
+                        <span class="material-symbols-outlined text-[18px]">auto_awesome</span> {{ 'PROJECTS.feature' | translate }}
                     </h4>
                     <ul class="list-disc pl-5 text-gray-500 dark:text-gray-400 space-y-1 text-sm">
-                        <li>Custom annotation-based routing for clear endpoint mapping</li>
-                        <li>Controllers are scanned and registered automatically with singleton pattern</li>
-                        <li>Clear separation of view logic using the Model-View pattern</li>
-                        <li>Supports easy deployment on Tomcat servers</li>
-                        <li>Automatically converts and binds request parameters</li>
-                        <li>Automated deployment scripts</li>
+                        <li>{{ 'PROJECTS.project2_feature1' | translate }}</li>
+                        <li>{{ 'PROJECTS.project2_feature2' | translate }}</li>
+                        <li>{{ 'PROJECTS.project2_feature3' | translate }}</li>
+                        <li>{{ 'PROJECTS.project2_feature4' | translate }}</li>
+                        <li>{{ 'PROJECTS.project2_feature5' | translate }}</li>
+                        <li>{{ 'PROJECTS.project2_feature6' | translate }}</li>
                     </ul>
 
                     <p class="text-gray-600 mt-2 dark:text-gray-200 max-w-2xl">
-                        Design of a proof-of-concept (PoC) application based on the framework:
+                        {{ 'PROJECTS.project2_title2' | translate }}
                         <a href="https://github.com/Miantsa2/avion" class="font-semibold text-[rgb(209,131,169)] hover:underline" target="_blank" rel="noopener noreferrer">
                             TicketING
                         </a>
                     </p>
 
                     <ul class="list-disc pl-5 text-gray-500 dark:text-gray-400 space-y-1 text-sm">
-                        <li>List of flights and number of seats available</li>
-                        <li>Booking and cancelling airline tickets</li>
-                        <li>Promotion and sale of airline tickets</li>
-                        <li>Import PDF and multimedia files</li>
+                        <li>{{ 'PROJECTS.project2_feature7' | translate }}</li>
+                        <li>{{ 'PROJECTS.project2_feature8' | translate }}</li>
+                        <li>{{ 'PROJECTS.project2_feature9' | translate }}</li>
+                        <li>{{ 'PROJECTS.project2_feature10' | translate }}</li>
                     </ul>
                 </div>
 
@@ -167,18 +166,18 @@
                 <span class="text-5xl sm:text-6xl font-bold opacity-40">03</span>
                 <div>
                     <p class="text-lg sm:text-xl font-semibold">
-                        Web and Mobile Cryptocurrency Platform
+                        {{ 'PROJECTS.project3_title' | translate }}
                     </p>
 
                     <div class="flex gap-2 mt-2 flex-wrap">
                         <div class="flex items-center gap-1 px-2 py-1 text-xs  text-gray-600 dark:text-white">
                             <span class="material-symbols-outlined text-[14px]">schedule</span>
-                             1 month
+                             {{ 'PROJECTS.project3_schedule' | translate }}
                         </div>
 
                         <div class="flex items-center gap-1 px-2 py-1 text-xs rounded-full bg-[rgb(243,200,221)]/40 text-gray-600 dark:text-white">
                             <span class="material-symbols-outlined text-[14px]">person</span>
-                             Team of 4
+                             {{ 'PROJECTS.project3_person' | translate }}
                         </div>
                     </div>
                 </div>
@@ -199,7 +198,7 @@
 
                 <div class="mt-5 w-full">
                     <h4 class="text-sm font-semibold text-[rgb(209,131,169)] mb-1 flex items-center gap-2">
-                        <span class="material-symbols-outlined text-[18px]">memory</span> Technologies Used
+                        <span class="material-symbols-outlined text-[18px]">memory</span> {{ 'PROJECTS.technologies' | translate }}
                     </h4>
                     <div class="flex flex-wrap gap-3 mt-3">
                         <div class="flex flex-wrap gap-3 mt-3 ">
@@ -263,25 +262,25 @@
 
             <div class="col-span-1 sm:col-span-8 flex flex-col justify-center gap-4">
                 <p class="text-gray-600 leading-relaxed dark:text-gray-200 leading-relaxed max-w-2xl">
-                    Development of a complete cryptocurrency management system
+                    {{ 'PROJECTS.project3_desc' | translate }}
                 </p>
                 
 
                 <div>
                     <h4 class="text-sm font-semibold text-[rgb(209,131,169)] mb-1 flex items-center gap-2">
                         <span class="material-symbols-outlined text-[18px]">auto_awesome</span>
-                        Features
+                        {{ 'PROJECTS.feature' | translate }}
                     </h4>
                     <ul class="list-disc pl-5 text-gray-500 dark:text-gray-400 space-y-1 text-sm">
-                        <li>Secure identity provider (multi-factor authentication, email validation, role management)</li>
-                        <li>Platform for buying or selling Cryptocurrency</li>
-                        <li>Cryptocurrency Portfolio Management</li>
-                        <li>Real-time Cryptocurrency Prices and Analysis</li>
-                        <li>Depositing and withdrawing funds</li>         
+                        <li>{{ 'PROJECTS.project3_feature1' | translate }}</li>
+                        <li>{{ 'PROJECTS.project3_feature2' | translate }}</li>
+                        <li>{{ 'PROJECTS.project3_feature3' | translate }}</li>
+                        <li>{{ 'PROJECTS.project3_feature4' | translate }}</li>
+                        <li>{{ 'PROJECTS.project3_feature5' | translate }}</li>         
                     </ul>
 
                     <p class="text-gray-600 leading-relaxed mt-2 dark:text-gray-200 leading-relaxed max-w-2xl">
-                        A mobile application for users
+                       {{ 'PROJECTS.project4_title' | translate }}
                     </p>
                 </div>
 
@@ -297,18 +296,18 @@
                 <span class="text-5xl sm:text-6xl font-bold opacity-40">04</span>
                 <div>
                     <p class="text-lg sm:text-xl font-semibold">
-                        web platform for managing a bakery
+                       {{ 'PROJECTS.project4_title' | translate }}
                     </p>
 
                     <div class="flex gap-2 mt-2 flex-wrap">
                         <div class="flex items-center gap-1 px-2 py-1 text-xs  text-gray-600 dark:text-white">
                             <span class="material-symbols-outlined text-[14px]">schedule</span>
-                             1 month
+                             {{ 'PROJECTS.project4_schedule' | translate }}
                         </div>
 
                         <div class="flex items-center gap-1 px-2 py-1 text-xs rounded-full bg-[rgb(243,200,221)]/40 text-gray-600 dark:text-white">
-                            <span class="material-symbols-outlined text-[14px]">person</span>
-                             Team of 2 
+                            <span class="material-symbols-outlined text-[14px]">  person</span>
+                            {{ 'PROJECTS.project4_person' | translate }}
                         </div>
                     </div>
                 </div>
@@ -332,19 +331,19 @@
 
             <div class="col-span-1 sm:col-span-8 flex flex-col justify-center gap-4">
                 <p class="text-gray-600 leading-relaxed dark:text-gray-200 leading-relaxed max-w-2xl">
-                    Design and Development of a Bakery Management Application
+                      {{ 'PROJECTS.project4_desc' | translate }}
                 </p>
 
                 <div>
                     <h4 class="text-sm font-semibold text-[rgb(209,131,169)] mb-1 flex items-center gap-2">
                         <span class="material-symbols-outlined text-[18px]">auto_awesome</span>
-                        Features
+                          {{ 'PROJECTS.feature' | translate }}
                     </h4>
                     <ul class="list-disc pl-5 text-gray-500 dark:text-gray-400 space-y-1 text-sm">
-                        <li>Sales Management</li>
-                        <li>Inventory Management and Raw Material Tracking</li>
-                        <li>Customer Management, Promotions, and Personalized Offers</li> 
-                        <li>Production Management with recipe Tracking </li> 
+                        <li>  {{ 'PROJECTS.project4_feature1' | translate }}</li>
+                        <li>{{ 'PROJECTS.project4_feature2' | translate }}</li>
+                        <li>{{ 'PROJECTS.project4_feature3' | translate }}</li> 
+                        <li>{{ 'PROJECTS.project4_feature4' | translate }} </li> 
 
     
                     </ul>
@@ -353,7 +352,7 @@
                 <div>
                     <h4 class="text-sm font-semibold text-[rgb(209,131,169)] mb-1 flex items-center gap-2">
                         <span class="material-symbols-outlined text-[18px]">memory</span>
-                        Technologies Used
+                        {{ 'PROJECTS.technologies' | translate }}
                     </h4>
                     <div class="flex flex-wrap gap-3 mt-3 ">
                         <div class="px-4 py-2 rounded-lg bg-white dark:bg-slate-800  dark:text-white
@@ -379,8 +378,7 @@
                              HTML, CSS, Bootstrap
                         </div>
 
-                       
-                        
+             
                     </div>
                 </div>
             </div>

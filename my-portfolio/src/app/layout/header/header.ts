@@ -1,19 +1,36 @@
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Component, OnInit, Inject, PLATFORM_ID, Output, EventEmitter } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+
 
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, TranslateModule], // modules nécessaires
   templateUrl: './header.html',
   styleUrl: './header.css',
 })
 
 export class Header implements OnInit {
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+  public currentLang: string;
+
+constructor(
+  @Inject(PLATFORM_ID) private platformId: Object,
+  public translate: TranslateService
+) {
+  this.translate.addLangs(['fr', 'en']);
+  this.translate.setDefaultLang('fr');
+
+  const browserLang = this.translate.getBrowserLang();
+  const lang = browserLang?.match(/fr|en/) ? browserLang : 'fr';
+  this.translate.use(lang);
+  this.currentLang = lang;  // <-- important
+}
+
+
   
   isMenuOpen = false;
   isSettingsOpen = false;
@@ -65,14 +82,10 @@ export class Header implements OnInit {
   }
 
 
-
-  setLanguage(lang: string) {
-
-    if (isPlatformBrowser(this.platformId)) {
-      localStorage.setItem('language', lang);
-    }
-
-    console.log("language changed to", lang);
-  }
+ // quand tu changes la langue
+switchLanguage(lang: string) {
+  this.translate.use(lang);
+  this.currentLang = lang; // <-- met à jour la variable
+}
 
 }
