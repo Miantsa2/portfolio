@@ -17,18 +17,35 @@ export class Header implements OnInit {
 
   public currentLang: string;
 
-constructor(
-  @Inject(PLATFORM_ID) private platformId: Object,
-  public translate: TranslateService
-) {
-  this.translate.addLangs(['fr', 'en']);
-  this.translate.setDefaultLang('fr');
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object,
+    public translate: TranslateService
+  ) {
+    this.translate.addLangs(['fr', 'en']);
 
-  const browserLang = this.translate.getBrowserLang();
-  const lang = browserLang?.match(/fr|en/) ? browserLang : 'fr';
-  this.translate.use(lang);
-  this.currentLang = lang;  // <-- important
-}
+    this.currentLang = 'en';
+
+    if (isPlatformBrowser(this.platformId)) {
+      let lang = 'en';
+
+    if (isPlatformBrowser(this.platformId)) {
+
+      const savedLang = localStorage.getItem('lang');
+
+      if (savedLang) {
+          lang = savedLang;
+      } 
+      else {
+        const browserLang = this.translate.getBrowserLang();
+        lang = browserLang?.match(/fr|en/) ? browserLang : 'en';
+      }
+
+      this.translate.use(lang);
+    }
+
+      this.currentLang = lang;
+    }
+  }
 
 
   
@@ -82,10 +99,13 @@ constructor(
   }
 
 
- // quand tu changes la langue
-switchLanguage(lang: string) {
-  this.translate.use(lang);
-  this.currentLang = lang; // <-- met à jour la variable
-}
+  switchLanguage(lang: string) {
+    this.translate.use(lang);
+    this.currentLang = lang;
+
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('lang', lang);
+    }
+  }
 
 }
