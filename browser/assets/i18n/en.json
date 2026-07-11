@@ -8,6 +8,11 @@
     "PORTFOLIO": "MY PORTFOLIO"
 
   },
+
+  "FOOT": {
+    "rights": "All rights reserved"
+  },
+  
    "settings":{
     "preference":"Preferences",
     "mode":"Interface Mode",
@@ -111,11 +116,18 @@
     "master": "Master’s Degree in Computer Science",
     "bachelor": "Bachelor's Degree in Computer Science",
     "school": "High School Diploma Series C",
-     "odoo_intern_title": "Odoo Developer Intern",
+
+    "odoo_intern_title": "Odoo Developer Intern",
     "odoo_env": "Immersed in a professional IT services environment",
-    "odoo_dev": "Development, customization, and maintenance of Odoo modules",
-    "agile_team": "Agile collaboration in a multidisciplinary team",
-    "testing_optimization": "Testing, debugging, and optimization of features",
+    "odoo_dev": "Developed, customized, and maintained Odoo modules",
+    "agile_team": "Collaborated with a multidisciplinary team",
+    "testing_optimization": "Performed testing, debugging, and optimization of developed features",
+
+    "exp2_task_1":"Contributed to the digital transformation of an industrial company’s business processes",
+    "exp2_task_2":"Developed and customized Odoo modules",
+    "exp2_task_3":"Reduced manual interventions through the automation of repetitive tasks",
+    "exp2_task_4":"Collaborated with field teams to understand operational workflows",
+
     "certification1":"Odoo module development, customization, and maintenance.",
     "certification2":"French language B2 proficiency certification.",
     "certification3":"French language A2 proficiency certification."
