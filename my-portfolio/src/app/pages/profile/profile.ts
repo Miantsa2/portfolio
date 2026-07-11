@@ -1,15 +1,22 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 
 @Component({
   selector: 'app-profile',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './profile.html',
   styleUrl: './profile.css',
 })
 export class Profile {
+
+  constructor(private translate: TranslateService) {}
+    t(key: string): string {
+      return this.translate.instant('EDUCATION.' + key);
+    }
+
 
   frontendSkills = [
     {
@@ -85,35 +92,51 @@ export class Profile {
   activeTab: 'education' | 'experience' = 'education';
   educationList = [
     {
-      title: "Master’s Degree in Computer Science",
+      key: "master",
       institute: "IT University Madagascar",
       period: "Present"
     },
     {
-      title: "Bachelor's Degree in Computer Science",
+      key: "bachelor",
       institute: "IT University Madagascar",
       period: "2022 - 2025"
     },
     {
-      title: "High School Diploma Series C",
+      key: "school",
       institute: "ESCA Madagascar",
       period: "2021 - 2022"
     }
   ];
 
   experienceList = [
+
     {
-      title: "Odoo Developer Intern",
-      institute: "Etech Consulting Madagascar",
-      period: "06/2025 - 08/2025",
-      tasks: [
-        "Immersed in a professional environment within an IT services company (ESN)",
-        "Development, customization, and maintenance of Odoo modules",
-        "Contributed to various client projects across different sectors and collaborated in an agile methodology within a multidisciplinary team",
-        "Performed testing, debugging, and optimization of existing features"
+      titleKey: "odoo_intern_title",
+      institute: "Dzama Madagascar",
+      period: "05/2026 - 06/2026",
+      tasksKeys: [
+        "exp2_task_1",
+        "exp2_task_2",
+        "exp2_task_3",
+        "exp2_task_4"
       ]
     },
+    {
+      titleKey: "odoo_intern_title",
+      institute: "Etech Consulting Madagascar",
+      period: "06/2025 - 08/2025",
+      tasksKeys: [
+        "odoo_env",
+        "odoo_dev",
+        "agile_team",
+        "testing_optimization"
+      ]
+    },
+
+   
   ];
+
+
 
   tools = [
     {
@@ -136,16 +159,24 @@ export class Profile {
   certifications=[
     {
       name: "ODOO",
-      description: " Odoo module development, customization, and maintenance.",
+      key: "certification1",
       place:"ArkeUp Academy",
       date:"2025"
 
     },
      {
       name: "DELF B2",
-      description: "French language B2 proficiency certification.",
+      key: "certification2",
       place:"Alliance Française Madagascar",
-      date:"2025"
+      date:"2024"
+
+    },
+
+    {
+      name: "DELF A2",
+      key: "certification3",
+      place:"Alliance Française Madagascar",
+      date:"2015"
 
     }
   ]

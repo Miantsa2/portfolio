@@ -11,7 +11,7 @@
             </span>
             
             <span class="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-500 font-light mt-1">
-                My Portfolio
+               {{ 'NAV.PORTFOLIO' | translate }}
             </span>
         </div>
  
@@ -26,7 +26,7 @@
       [routerLinkActiveOptions]="{ exact: true }"
       class="relative text-xs uppercase tracking-[0.2em] hover:text-[rgb(209,131,169)] transition-colors group"
       >
-      Home
+      {{ 'NAV.HOME' | translate }}
       <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[rgb(209,131,169)] transition-all duration-300 group-hover:w-full"></span>
     </a>
 
@@ -34,7 +34,7 @@
         routerLinkActive="text-[rgb(209,131,169)]"
         [routerLinkActiveOptions]="{ exact: true }"
          class="relative text-xs uppercase tracking-[0.2em] hover:text-[rgb(209,131,169)] transition-colors group">
-      Profile
+      {{ 'NAV.PROFILE' | translate }}
       <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[rgb(209,131,169)] transition-all duration-300 group-hover:w-full"></span>
     </a>
 
@@ -42,7 +42,7 @@
         routerLinkActive="text-[rgb(209,131,169)]"
         [routerLinkActiveOptions]="{ exact: true }"
          class="relative text-xs uppercase tracking-[0.2em] hover:text-[rgb(209,131,169)] transition-colors group">
-      Projects
+      {{ 'NAV.PROJECTS' | translate }}
       <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[rgb(209,131,169)] transition-all duration-300 group-hover:w-full"></span>
     </a>
 
@@ -50,19 +50,19 @@
         routerLinkActive="text-[rgb(209,131,169)]"
         [routerLinkActiveOptions]="{ exact: true }"
         class="relative text-xs uppercase tracking-[0.2em] hover:text-[rgb(209,131,169)] transition-colors group">
-        Contact
+        {{ 'NAV.CONTACT' | translate }}
       <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[rgb(209,131,169)] transition-all duration-300 group-hover:w-full"></span>
     </a>
   </nav>
 
   <div class="flex items-center gap-8">
 
-    <a href="#contact" 
+    <a href="main-layout/contact" 
     class="hidden sm:block px-6 py-2 text-xs uppercase tracking-widest font-bold 
             bg-[rgb(209,131,169)] text-white rounded shadow-lg shadow-[rgb(209,131,169)]/20 
             hover:bg-[rgb(190,110,150)] hover:shadow-[rgb(209,131,169)]/40 
             duration-300">
-          Hire Me
+          {{ 'NAV.HIRE_ME' | translate }}
     </a>
 
     <button (click)="toggleSettings()" class="w-10 h-10 rounded-full bg-portfolio-card border border-white/10 flex items-center justify-center text-[rgb(209,131,169)] hover:bg-[rgb(243,200,221)] hover:text-portfolio-dark transition-all shadow-lg group">
@@ -90,7 +90,7 @@
         [routerLinkActiveOptions]="{ exact: true }"
         class="flex items-center gap-2 py-2 px-3 rounded hover:bg-[rgb(245,222,250)] transition-colors">
         <span class="material-symbols-outlined text-[20px] text-[rgb(209,131,169)]">home</span>
-        <span>Home</span>
+        <span>{{ 'NAV.HOME' | translate }}</span>
       </a>
 
       <!-- Profile -->
@@ -99,7 +99,7 @@
         [routerLinkActiveOptions]="{ exact: true }"
          class="flex items-center gap-2 py-2 px-3 rounded hover:bg-[rgb(245,222,250)] transition-colors">
         <span class="material-symbols-outlined text-[20px] text-[rgb(209,131,169)]">person</span>
-        <span>Profile</span>
+        <span>{{ 'NAV.PROFILE' | translate }}</span>
       </a>
 
       <!-- Projects -->
@@ -108,7 +108,7 @@
         [routerLinkActiveOptions]="{ exact: true }"
          class="flex items-center gap-2 py-2 px-3 rounded hover:bg-[rgb(245,222,250)] transition-colors">
         <span class="material-symbols-outlined text-[20px] text-[rgb(209,131,169)]">code</span>
-        <span>Projects</span>
+        <span>{{ 'NAV.PROJECTS' | translate }}</span>
       </a>
 
       <!-- Contact -->
@@ -117,11 +117,11 @@
         [routerLinkActiveOptions]="{ exact: true }"
          class="flex items-center gap-2 py-2 px-3 rounded hover:bg-[rgb(245,222,250)] transition-colors">
         <span class="material-symbols-outlined text-[20px] text-[rgb(209,131,169)]">mail</span>
-        <span>Contact</span>
+        <span>{{ 'NAV.CONTACT' | translate }}</span>
       </a>
 
       <!-- Hire Me -->
-      <a href="#contact" class="mt-6 flex items-center justify-center py-3 px-4 bg-[rgb(209,131,169)] text-white font-bold rounded-lg shadow-lg hover:bg-[rgb(190,110,150)] transition-all">
+      <a href="main-layout/contact" class="mt-6 flex items-center justify-center py-3 px-4 bg-[rgb(209,131,169)] text-white font-bold rounded-lg shadow-lg hover:bg-[rgb(190,110,150)] transition-all">
         Hire Me
       </a>
 
@@ -138,13 +138,14 @@
 >
   <h3 class="font-serif text-[rgb(209,131,169)] text-lg font-bold mb-5 flex items-center gap-2">
     <span class="material-symbols-outlined text-[20px] text-[rgb(209,131,169)]">tune</span>
-    Preferences
+    {{ 'settings.preference' | translate }}
   </h3>
 
   <div class="mb-6 flex items-center justify-between">
 
   <span class="text-sm font-medium tracking-wide">
-    Interface Mode
+        {{ 'settings.mode' | translate }}
+
   </span>
 
   <button
@@ -167,15 +168,27 @@
 </div>
   <hr class="border mb-6 dark:border-[rgb(209,131,169)] ">
 
-  <div>
-    <p class="text-sm  font-medium mb-3 tracking-wide">Language</p>
-    <div class="grid grid-cols-2 gap-2">
-      <button class="text-xs py-2 px-3 rounded-lg border border-[rgb(209,131,169)] bg-[rgb(209,131,169)]/10 text-[rgb(209,131,169)] font-bold transition-all hover:bg-[rgb(209,131,169)] hover:text-white">
-        ENGLISH
-      </button>
-      <button class="text-xs py-2 px-3 rounded-lg border border-white/10 text-gray-400 font-bold transition-all hover:bg-[rgb(209,131,169)] hover:hover:text-white">
-        FRENCH
-      </button>
-    </div>
-  </div>
+  <div class="grid grid-cols-2 gap-2">
+  <button 
+    (click)="switchLanguage('en')"
+    class="text-xs py-2 px-3 rounded-lg border font-bold transition-all"
+    [ngClass]="{
+      'bg-[rgb(209,131,169)] text-white border-[rgb(209,131,169)]': translate.currentLang === 'en',
+      'text-[rgb(209,131,169)] border-[rgb(209,131,169)]/10': translate.currentLang !== 'en'
+    }"
+  >
+    {{ 'settings.lg_en' | translate }}
+  </button>
+
+  <button 
+    (click)="switchLanguage('fr')"
+    class="text-xs py-2 px-3 rounded-lg border font-bold transition-all"
+    [ngClass]="{
+      'bg-[rgb(209,131,169)] text-white border-[rgb(209,131,169)]': translate.currentLang === 'fr',
+      'text-[rgb(209,131,169)] border-[rgb(209,131,169)]/10': translate.currentLang !== 'fr'
+    }"
+  >
+    {{ 'settings.lg_fr' | translate }}
+  </button>
+</div>
 </div>

@@ -1,0 +1,138 @@
+{
+  "NAV": {
+    "HOME": "Home",
+    "PROFILE": "Profile",
+    "PROJECTS": "Projects",
+    "CONTACT": "Contact",
+    "HIRE_ME": "Hire Me",
+    "PORTFOLIO": "MY PORTFOLIO"
+
+  },
+
+  "FOOT": {
+    "rights": "All rights reserved"
+  },
+  
+   "settings":{
+    "preference":"Preferences",
+    "mode":"Interface Mode",
+    "lg_en":"ENGLISH",
+    "lg_fr":"FRENCH"
+
+  },
+
+  "HOME":{
+    "state":"Open for new collaborations",
+    "title1":"Scalable digital solutions",
+    "title2":"crafted to turn your ideas into reality",
+    "description1":"Passionate about creating digital solutions and driven by innovation,",
+    "description2":"I am a Full Stack Developer specializing in building scalable, user-focused web applications, capable of turning complex ideas into impactful digital experiences.",
+    "work":"View my work",
+    "cv":"Download my CV"
+  },
+   "PROFILE":{
+    "title":"Passionate about creating digital solutions and driven by innovation,I am a Full Stack developer specialized in building scalable and user-centered web applications.",
+    "work_experience":"Work experience",
+    "skills_front":"Frontend Skills",
+    "skills_back": "Backend  Skills",
+    "tools":"Tools & DevOps"
+
+  },
+
+  "PROJECTS":{
+    "title":"Discover a selection of my projects showcasing full-stack development skills, creative problem-solving, and innovative solutions.",
+    "schedule":"Schedule",
+    "person":"Person",
+    "website":"Site",
+    "feature":"Features",
+    "technologies":"Technologies Used",
+
+    "project1_title":"Shopping Mall Management Web Application",
+    "project1_schedule":"1 month",
+    "project1_person":"Team of 2",
+    "project1_desc":" Design and development of a shopping mall management web application with multi-role management (Admin, Store, Customer).",
+    "project1_feature1":"Secure authentication (JWT, role-based access control)",
+    "project1_feature2":"Management of halls and stores",
+    "project1_feature3":"Product management (stockable / non-stockable, promotions, sponsorship)",
+    "project1_feature4":"Online payment system using credit cards",
+    "project1_feature5":"Event management with validation workflow",
+    "project1_feature6":"Dashboard with KPIs and data visualization",
+    "project1_feature7":"Real-time notification system",
+    "project1_feature8":"Management of sales, deliveries, and PDF invoicing",
+
+    "project2_title1":"Framework Sprint",
+    "project2_schedule":"3 months",
+    "project2_person":"Solo",
+    "project2_desc":"Development of a modular and scalable web application framework designed for rapid development",
+    "project2_feature1":"Custom annotation-based routing for clear endpoint mapping",
+    "project2_feature2":"Controllers are scanned and registered automatically with singleton pattern",
+    "project2_feature3":"Clear separation of view logic using the Model-View pattern",
+    "project2_feature4":"Supports easy deployment on Tomcat servers",
+    "project2_feature5":"Automatically converts and binds request parameters",
+    "project2_feature6":"Automated deployment scripts",
+    
+    "project2_title2":"Design of a proof-of-concept (PoC) application based on the framework:",
+    "project2_feature7":"List of flights and number of seats available",
+    "project2_feature8":"Booking and cancelling airline tickets",
+    "project2_feature9":"Promotion and sale of airline tickets",
+    "project2_feature10":"Import PDF and multimedia files",
+   
+    "project3_title":"Web and Mobile Cryptocurrency Platform",
+    "project3_schedule":"1 month",
+    "project3_person":"Team of 4",
+    "project3_desc":"Development of a complete cryptocurrency management system",
+    "project3_feature1":"Secure identity provider (multi-factor authentication, email validation, role management)",
+    "project3_feature2":"Platform for buying or selling Cryptocurrency",
+    "project3_feature3":"Cryptocurrency Portfolio Management",
+    "project3_feature4":"Real-time Cryptocurrency Prices and Analysis",
+    "project3_feature5":"Depositing and withdrawing funds",
+    "project3_title2":"A mobile application for users",
+
+
+    "project4_title":"Web platform for managing a bakery",
+    "project4_schedule":"1 month",
+    "project4_person":"Team of 2",
+    "project4_desc":"Design and Development of a Bakery Management Application",
+    "project4_feature1":"Sales Management",
+    "project4_feature2":"Inventory Management and Raw Material Tracking",
+    "project4_feature3":"Customer Management, Promotions, and Personalized Offers",
+    "project4_feature4":"Production Management with recipe Tracking"
+
+  },
+  "CONTACT":{
+    "title":"Let’s work together",
+    "desc":"Contact me",
+    "desc2":"Have something in mind or just want to connect? I’m always open to discussing new opportunities.",
+    "phone":"Phone",
+    "location":"Location",
+    "name":"Name",
+    "submit":"Envoyer le message",
+    "success":"succès",
+    "success_desc":"I am committed to replying to you as soon as possible"
+
+  },
+  
+  "EDUCATION": {
+    "master": "Master’s Degree in Computer Science",
+    "bachelor": "Bachelor's Degree in Computer Science",
+    "school": "High School Diploma Series C",
+
+    "odoo_intern_title": "Odoo Developer Intern",
+    "odoo_env": "Immersed in a professional IT services environment",
+    "odoo_dev": "Developed, customized, and maintained Odoo modules",
+    "agile_team": "Collaborated with a multidisciplinary team",
+    "testing_optimization": "Performed testing, debugging, and optimization of developed features",
+
+    "exp2_task_1":"Contributed to the digital transformation of an industrial company’s business processes",
+    "exp2_task_2":"Developed and customized Odoo modules",
+    "exp2_task_3":"Reduced manual interventions through the automation of repetitive tasks",
+    "exp2_task_4":"Collaborated with field teams to understand operational workflows",
+
+    "certification1":"Odoo module development, customization, and maintenance.",
+    "certification2":"French language B2 proficiency certification.",
+    "certification3":"French language A2 proficiency certification."
+
+  }
+}
+
+  

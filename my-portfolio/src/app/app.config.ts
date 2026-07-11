@@ -3,10 +3,22 @@ import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
 import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
+import { provideHttpClient } from '@angular/common/http';
+import { provideTranslateService } from '@ngx-translate/core';
+import { SafeTranslateLoader } from './safe-translate-loader';
+import { TranslateLoader } from '@ngx-translate/core';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
-    provideRouter(routes), provideClientHydration(withEventReplay())
+    provideRouter(routes), provideClientHydration(withEventReplay()),
+    provideHttpClient(),
+    provideTranslateService({
+      loader: {
+        provide: TranslateLoader,
+        useClass: SafeTranslateLoader
+      },
+      fallbackLang: 'en'
+    })
   ]
 };
