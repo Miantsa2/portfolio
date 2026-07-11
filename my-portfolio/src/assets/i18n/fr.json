@@ -7,6 +7,13 @@
     "HIRE_ME": "Me recruter",
     "PORTFOLIO": "MON PORTFOLIO"
   },
+
+  "FOOT": {
+    "rights": "Tout droits réservés"
+  },
+
+
+
   "settings": {
     "preference": "Préférences",
     "mode": "Mode d'interface",
@@ -107,6 +114,14 @@
     "odoo_dev": "Développement, personnalisation et maintenance de modules Odoo",
     "agile_team": "Collaboration Agile au sein d'une équipe pluridisciplinaire",
     "testing_optimization": "Tests, débogage et optimisation des fonctionnalités",
+    
+    
+    "exp2_task_1":"Contribution à la digitalisation des processus d’une entreprise industrielle ",
+    "exp2_task_2":"Développement, personnalisation et maintenance de modules Odoo",
+    "exp2_task_3":"Réduction des interventions manuelles grâce à l'automatisation des tâches répétitives",
+    "exp2_task_4":"Immersion et collaboration avec les équipes sur le terrain pour comprendre les flux opérationnels",
+
+    
     "certification1": "Développement, personnalisation et maintenance de modules Odoo.",
     "certification2": "Certification de maîtrise de la langue française (niveau B2).",
     "certification3": "Certification de maîtrise de la langue française (niveau A2)."

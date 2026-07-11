@@ -109,6 +109,18 @@ export class Profile {
   ];
 
   experienceList = [
+
+    {
+      titleKey: "odoo_intern_title",
+      institute: "Dzama Madagascar",
+      period: "05/2026 - 06/2026",
+      tasksKeys: [
+        "exp2_task_1",
+        "exp2_task_2",
+        "exp2_task_3",
+        "exp2_task_4"
+      ]
+    },
     {
       titleKey: "odoo_intern_title",
       institute: "Etech Consulting Madagascar",
@@ -120,6 +132,8 @@ export class Profile {
         "testing_optimization"
       ]
     },
+
+   
   ];
 
 
