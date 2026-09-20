@@ -121,7 +121,12 @@
     "exp2_task_3":"Réduction des interventions manuelles grâce à l'automatisation des tâches répétitives",
     "exp2_task_4":"Immersion et collaboration avec les équipes sur le terrain pour comprendre les flux opérationnels",
 
-    
+    "exp3_task_1":"Participation à la migration et à l’évolution d’une solution Odoo existante ",
+    "exp3_task_2":"Migration d’un projet Odoo opérationnel de la version 13 vers la version 17",
+    "exp3_task_3":"Analyse, nettoyage et préparation des données avant migration",
+    "exp3_task_4":"Adaptation et vérification des modules personnalisés pour assurer leur compatibilité avec Odoo 17",
+    "exp3_task_5":"Identification et résolution des erreurs et incompatibilités rencontrées lors de la migration",
+
     "certification1": "Développement, personnalisation et maintenance de modules Odoo.",
     "certification2": "Certification de maîtrise de la langue française (niveau B2).",
     "certification3": "Certification de maîtrise de la langue française (niveau A2)."
