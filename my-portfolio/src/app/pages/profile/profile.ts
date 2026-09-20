@@ -112,8 +112,22 @@ export class Profile {
 
     {
       titleKey: "odoo_intern_title",
+      institute: "MGBI",
+      period: "07/2026 - Present",
+      tasksKeys: [
+        "exp3_task_1",
+        "exp3_task_2",
+        "exp3_task_3",
+        "exp3_task_4",
+        "exp3_task_5"
+
+      ]
+    },
+
+    {
+      titleKey: "odoo_intern_title",
       institute: "Dzama Madagascar",
-      period: "05/2026 - 06/2026",
+      period: "05/2026 - 07/2026",
       tasksKeys: [
         "exp2_task_1",
         "exp2_task_2",
