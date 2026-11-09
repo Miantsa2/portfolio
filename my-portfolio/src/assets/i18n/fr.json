@@ -34,7 +34,8 @@
     "work_experience": "Expérience professionnelle",
     "skills_front":"Compétences Frontend ",
     "skills_back": " Compétences Backend",
-    "tools":"Outils & DevOps"
+    "tools":"Outils, DevOps & Intelligence Artificielle",
+    "DB":"Bases de données"
   },
   "PROJECTS": {
     "title": "Découvrez une sélection de mes projets illustrant mes compétences en développement full-stack, ma capacité de résolution de problèmes et mes solutions innovantes.",
@@ -92,7 +93,18 @@
     "project4_feature1": "Gestion des ventes",
     "project4_feature2": "Gestion des stocks et suivi des matières premières",
     "project4_feature3": "Gestion des clients, promotions et offres personnalisées",
-    "project4_feature4": "Gestion de la production avec suivi des recettes"
+    "project4_feature4": "Gestion de la production avec suivi des recettes",
+
+    "project5_title": "Conception d'un Système RAG Local ",
+    "project5_schedule": "15 jours",
+    "project5_person": "Solo",
+    "project5_desc": "Conception et développement d'un assistant documentaire intelligent basé sur le RAG (Retrieval-Augmented Generation).",
+    "project5_feature1": "Importation de documents : Téléchargement de fichiers PDF, TXT et Markdown pour constituer une base documentaire personnelle",
+    "project5_feature2": "Extraction, découpage et vectorisation des contenus documentaires.",
+    "project5_feature3": "Recherche sémantique des informations pertinentes dans une base vectorielle.",
+    "project5_feature4": "Génération de réponses contextuelles à l'aide d'un LLM local (RAG).",
+    "project5_feature5": "Consultation des sources et des extraits ayant servi à générer les réponses."
+
   },
   "CONTACT": {
     "title": "Travaillons ensemble",
@@ -122,9 +134,9 @@
     "exp2_task_4":"Immersion et collaboration avec les équipes sur le terrain pour comprendre les flux opérationnels",
 
     "exp3_task_1":"Participation à la migration et à l’évolution d’une solution Odoo existante ",
-    "exp3_task_2":"Migration d’un projet Odoo opérationnel de la version 13 vers la version 17",
+    "exp3_task_2":"Migration d’un projet Odoo opérationnel de la version 13 vers la version 19",
     "exp3_task_3":"Analyse, nettoyage et préparation des données avant migration",
-    "exp3_task_4":"Adaptation et vérification des modules personnalisés pour assurer leur compatibilité avec Odoo 17",
+    "exp3_task_4":"Adaptation et vérification des modules personnalisés pour assurer leur compatibilité avec Odoo 19",
     "exp3_task_5":"Identification et résolution des erreurs et incompatibilités rencontrées lors de la migration",
 
     "certification1": "Développement, personnalisation et maintenance de modules Odoo.",

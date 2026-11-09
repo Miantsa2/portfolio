@@ -185,6 +185,22 @@
                 </div>            
             </div>
 
+              <!-- DB -->
+            <div class="bg-[rgb(243,200,221)]/10 p-6 rounded-2xl border border-[rgb(243,200,221)] shadow-sm dark:bg-slate-800">
+                <h2 class="text-2xl font-bold mb-6 flex items-center gap-3 text-[rgb(209,131,169)]">
+                    <span class="material-symbols-outlined text-[25px]">database</span>
+                         {{ 'PROFILE.DB' | translate }}
+                </h2>
+                <div class="flex flex-wrap gap-3">
+                    <div *ngFor="let base of DBSkills" class="px-4 py-2 rounded-lg bg-white dark:bg-slate-800 
+                                border border-[rgb(243,200,221)] 
+                                text-sm font-medium 
+                                hover:scale-105 transition duration-300 cursor-default">
+                            {{ base.name }}
+                    </div>
+                </div>
+            </div>
+
       <!-- TOOLS & DEVOPS -->
             <div class="bg-[rgb(243,200,221)]/10 p-6 rounded-2xl border border-[rgb(243,200,221)] shadow-sm dark:bg-slate-800">
                 <h2 class="text-2xl font-bold mb-6 flex items-center gap-3 text-[rgb(209,131,169)]">
@@ -200,6 +216,8 @@
                     </div>
                 </div>
             </div>
+
+      
 
         </div>
 
