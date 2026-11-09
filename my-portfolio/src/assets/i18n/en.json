@@ -35,7 +35,8 @@
     "work_experience":"Work experience",
     "skills_front":"Frontend Skills",
     "skills_back": "Backend  Skills",
-    "tools":"Tools & DevOps"
+    "tools":"Tools, DevOps & Artificial Intelligence",
+    "DB":"Databases"
 
   },
 
@@ -96,7 +97,17 @@
     "project4_feature1":"Sales Management",
     "project4_feature2":"Inventory Management and Raw Material Tracking",
     "project4_feature3":"Customer Management, Promotions, and Personalized Offers",
-    "project4_feature4":"Production Management with recipe Tracking"
+    "project4_feature4":"Production Management with recipe Tracking",
+
+    "project5_title": "Design and Development of a Local RAG System",
+    "project5_schedule": "15 days",
+    "project5_person": "Individual Project",
+    "project5_desc": "Design and development of an intelligent document assistant based on Retrieval-Augmented Generation (RAG).",
+    "project5_feature1": "Document Upload: Importing PDF, TXT, and Markdown files to build a personal document knowledge base.",
+    "project5_feature2": "Document Processing: Text extraction, chunking, and vectorization of document content.",
+    "project5_feature3": "Semantic Search: Retrieving relevant information from a vector database based on user queries.",
+    "project5_feature4": "Contextual Answer Generation: Generating answers using a locally hosted Large Language Model (LLM) through RAG.",
+    "project5_feature5": "Source Traceability: Displaying source documents and text excerpts used to generate answers."
 
   },
   "CONTACT":{
