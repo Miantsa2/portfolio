@@ -33,6 +33,11 @@ export class Profile {
       name: 'Javascript',
       level: 80,
       color: 'bg-blue-500'
+    },
+     {
+      name: 'Tailwind',
+      level: 80,
+      color: 'bg-purple-500'
     }
   ];
 
@@ -51,6 +56,11 @@ export class Profile {
       name: 'MongoDB',
       level: 80,
       color: 'bg-purple-500'
+    },
+     {
+      name: 'SQL Server',
+      level: 80,
+      color: 'bg-blue-500'
     }
    
   ];
@@ -167,6 +177,15 @@ export class Profile {
     },
     {
       name: "Canva"
+    },
+    {
+      name: "Claude"
+    },
+    {
+      name: "ChatGPT"
+    },
+    {
+      name: "LLM"
     },
   ];
 
